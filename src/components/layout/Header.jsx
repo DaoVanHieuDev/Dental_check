@@ -1,27 +1,42 @@
-import "./Header.scss"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-export default function Header() {
-    return (
-    <>
-    <div className="Header"> 
-    <img className="imgLogo" src="/images/logo-white.png" alt="" /> 
-    <div className="menuOption">
-         <p> TRANG CHỦ </p>       
-         <p> QUY TRÌNH </p>   
-         <p>HỆ THỐNG</p>
-         <div className="inputType"> 
-            <input type="text" placeholder="Nhấp vào đây" /> 
-            <FontAwesomeIcon className="fontSearch" icon={faMagnifyingGlass} beat/>
-         </div>
-    </div>
-   <div className="users"> 
-    <div> Đăng Ký</div>
-    <div> | </div>
-    <div> Đăng Nhập</div>
-   </div>
+import "./Header.scss";
+import { NavLink } from "react-router-dom";
+import Search from "../common/Search";
 
-    </div>
-    
-    </>  );
+export default function Header() {
+ 
+  const stored= JSON.parse(localStorage.getItem("username")) || JSON.parse(localStorage.getItem("admin"));
+
+  return (
+    <>
+      <div className="Header">
+        <img className="imgLogo" src="/images/logo-white.png" alt="" />
+        <div className="menuOption">
+          <NavLink className="navlink" to="/">
+            {" "}
+            TRANG CHỦ{" "}
+          </NavLink>
+          <NavLink className="navlink" to="/format">
+            {" "}
+            QUY TRÌNH{" "}
+          </NavLink>
+          <NavLink className="navlink" to="/system">
+            HỆ THỐNG
+          </NavLink>
+          <div className="inputType">
+          <Search/>           
+          </div>
+        </div> 
+        {stored ?(  
+        <div className="users">
+        <NavLink to ="/admin"style={{color:"white",textDecoration:"none",lineHeight:"70px"}} > Xin chào {stored} </NavLink>
+        </div>
+        )
+        :(    <div className="users">
+        <NavLink to="/register" className="dangkine">Đăng Ký </NavLink>
+        <div> | </div>
+        <NavLink to="/login" className="dangnhapne"> Đăng Nhập</NavLink>
+      </div>)}
+      </div>
+    </>
+  );
 }

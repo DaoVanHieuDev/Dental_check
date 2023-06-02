@@ -1,5 +1,4 @@
-import "./Footer.scss"
-
+import "./Footer.scss";
 
 export default function Footer() {
   return (
@@ -7,7 +6,7 @@ export default function Footer() {
       <div className="Footer">
         <div>
           {" "}
-          <img  className="imgLogo" src="/images/logo-white.png" alt="" />{" "}
+          <img className="imgLogo" src="/images/logo-white.png" alt="" />{" "}
         </div>
         <div>
           <div> LIÊN HỆ CHÚNG TÔI </div>

@@ -1,0 +1,70 @@
+.formLoginAdmin {
+    padding: 100px 300px 100px 500px;
+    background-image: url("https://khamphahue.com.vn/Portals/0/Medias/Nam2022/T10/thumb_Khamphahue_Logo_Rikkeisoft_6_10_2022_17_17_43_817_CH.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+
+    .divFormLoginAdmin {
+        display: block;
+        width: 500px;
+        height: 35vw;
+        border: 1px solid black;
+        background-image: url('https://techviec.com/wp-content/uploads/2019/09/rikkeisoft-logo-1.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+        border-radius: 15px;
+
+        h1 {
+            padding: 30px 150px 30px 150px;
+        }
+
+        .formLoginAdminBayby {
+            padding: 0px 50px 100px 50px;
+
+            input {
+                background-color: rgba(150, 70, 74, 0.987);
+                width: 400px;
+                height: 50px;
+            }
+
+            button {
+                background-color: rgb(191, 43, 43);
+                border-radius: 20px;
+                color: white;
+                width: 400px;
+            }
+        }
+    }
+}
+
+.adminTable {
+    background-color: aqua;
+    width: 100%;
+    gap: 100px;
+    height: 100vh;
+
+    .headerAdmin {
+        border: 1px solid black;
+        height: 7vh;
+    }
+    .menuComponent {
+        display: flex;
+        border: 1px solid black;
+        height: 93vh;
+
+        .menuTable {
+            border: 1px solid black;
+            width: 150px;
+            .menuMini {
+                div {
+                    border: 1px solid black;
+                    width: 150px    ;
+                    line-height: 50px;
+                    font-weight: 500;
+                }
+            }
+
+        }
+    }
+
+}

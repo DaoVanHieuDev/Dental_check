@@ -1,0 +1,22 @@
+.containerSystem{
+    padding: 50px 150px 50px 150px;
+    .contactDontmain{
+        width: 100%;
+        .chuaaa{
+             display: grid;
+            grid-template-columns: auto auto auto auto;
+            text-align: center;
+           
+           .setInterval{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(254, 254, 254);
+            img{
+                border-radius: 50%;
+            }
+        } 
+        }
+        
+    }
+
+}
